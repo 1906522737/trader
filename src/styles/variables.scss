@@ -1,0 +1,111 @@
+// primary color
+$primary: #345ca8;
+$primary-dark: #27334d;
+$primary-light: #6c95d2;
+
+// rgb(52,94,167);
+// text color
+$--color-text-primary: #ffffff;
+$--color-text-regular: #c2c4ce;
+$--color-text-secondary: #6c727c;
+$--color-text-placeholder: #63656b;
+$--color-text-red: #db4039;
+$--color-text-green: #16804c;
+$--color-text-yellow: #e69743;
+$--color-text-brand: #6495ed;
+
+// 语义
+// $--color-error: #d95245;
+$--color-error: #e7443c;
+// $--color-error: #c7252a;
+
+// $--color-success: #578636;
+// $--color-success: #45a164;
+$--color-success: #4799eb;
+// $--color-waring: #e39f55;
+// $--color-waring: #e69844;
+$--color-warning: #e1a82d;
+$--color-info: #535961;
+$--color-info-1: #545a62;
+
+$--color-success-light: mix(#fff, $--color-success, 40%);
+$--color-warning-light: mix(#fff, $--color-warning, 40%);
+$--color-error-light: mix(#fff, $--color-error, 40%);
+$--color-info-light: mix(#fff, $--color-info, 40%);
+
+// icon
+$--color-icon-red: #db4039;
+$--color-icon-yellow: #e69743;
+$--color-icon-green: #45c085;
+$--color-icon-purple: #7473e0;
+$--color-icon-blue: #4272cd;
+$--color-icon-white: #c2c4ce;
+
+$--color-icon-bg-dark: #545a62;
+$--color-icon-bg-light: #a7aaae;
+
+// border color
+$--color-border-base: #292e36;
+$--color-border-dark: #0c0d13;
+$--color-border-darker: #090915;
+$--color-border-light: #6e717a;
+$--color-border-blue: #2f3c56;
+
+// background
+$--color-background-darker: #080b12;
+$--color-background-dark: #15161b;
+$--color-background-base: #1c1f26;
+$--color-background-light: #272c35;
+$--color-background-lighter: #383d45;
+$--color-background-extralight: #535961;
+$--color-background-extralighter: #556069;
+
+//  color palette
+$--color-red-palette-1: #b54a3f;
+$--color-red-palette-2: #cf5a4f;
+$--color-red-palette-3: #e29585;
+$--color-red-palette-4: #edc6b8;
+$--color-red-palette-5: #ff4a4a;
+
+$--color-green-palette-1: #578636;
+$--color-green-palette-2: #7cac54;
+$--color-green-palette-3: #8dca73;
+$--color-green-palette-4: #a9e4a1;
+$--color-green-palette-5: #2fac52;
+
+$--color-yellow-palette-1: #e18846;
+$--color-yellow-palette-2: #e6a24f;
+$--color-yellow-palette-3: #ebb85e;
+$--color-yellow-palette-4: #f0cb80;
+
+// scroll bar
+$--color-scroll-bar: #505050;
+
+// table
+$--color-table-highligh: #323642;
+$--color-table-zebra: #262832;
+$--color-table-header: #272c35;
+$--color-table-row: #1d1f25;
+$--color-table-border: #272c35;
+$--color-table-header-border: #15161b;
+
+// color
+$--color-pink: #d16878;
+$--color-orange: #ca5e3b;
+
+// mini
+$--color-mini-background: #353c45;
+
+// input
+$--color-input-background: #1d1f25;
+
+// divider
+$--color-divider-base: #272c35;
+$--color-divider-dark: #16161c;
+
+:export {
+  borderDarker: $--color-border-darker;
+  textRegular: $--color-text-regular;
+  textPrimary: $--color-text-primary;
+  backgroundBase: $--color-background-base;
+}

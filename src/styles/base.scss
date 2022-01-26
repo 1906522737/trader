@@ -1,0 +1,295 @@
+@import './variables.scss';
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+}
+
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, SourceHan, 'Segoe UI',
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  overflow: hidden;
+  font-weight: 500;
+}
+
+#app {
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $--color-background-light;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $--color-background-extralight;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+.el-scrollbar__wrap {
+  overflow-x: auto !important;
+  margin-right: 0px !important;
+}
+.el-scrollbar__view.default-scrollbar__view {
+  height: 100%;
+}
+
+.el-scrollbar__view.p20-scrollbar__view {
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+/* icon */
+.process-state-icon {
+  cursor: pointer;
+
+  &:hover {
+    color: $--color-text-primary;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+  }
+
+  &.loading {
+    font-size: 13px;
+    .svg-icon {
+      animation: retate 2s linear infinite;
+    }
+  }
+
+  @keyframes retate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.info-icon {
+  cursor: pointer;
+}
+.info-icon:hover {
+  color: $--color-text-primary;
+}
+
+.primary-icon {
+  cursor: pointer;
+}
+.primary-icon:hover {
+  color: $primary;
+}
+
+.red-icon {
+  cursor: pointer;
+}
+.red-icon:hover {
+  color: $--color-text-red;
+}
+
+.green-icon {
+  cursor: pointer;
+}
+.green-icon:hover {
+  color: $--color-text-green;
+}
+
+.yellow-icon {
+  cursor: pointer;
+}
+.yellow-icon:hover {
+  color: $--color-text-yellow;
+}
+
+.el-table {
+  .el-table__operation-section {
+    display: flex;
+    justify-content: center;
+
+    > * {
+      padding: 0 5px;
+    }
+  }
+}
+
+.blink-red-left-to-right {
+  background: linear-gradient(to right, #8e0e00, #1c1f26);
+  opacity: 0;
+  animation: blinkred 1s ease-out;
+}
+
+.blink-green-left-to-right {
+  background: linear-gradient(to right, #357922, #1c1f26);
+  // filter: opacity(0);
+  opacity: 0;
+  animation: blinkred 1s ease-out;
+}
+
+@keyframes blinkred {
+  0% {
+    // filter: opacity(0);
+    opacity: 0;
+  }
+  50% {
+    // filter: opacity(80%);
+    opacity: 0.7;
+  }
+  100% {
+    // filter: opacity(0);
+    opacity: 0;
+  }
+}
+
+.blink-red-right-to-left {
+  background: linear-gradient(to right, #1c1f26, #8e0e00);
+  opacity: 0;
+  animation: blinkred 1s ease-out;
+}
+
+.blink-green-right-to-left {
+  background: linear-gradient(to right, #1c1f26, #357922);
+  opacity: 0;
+  animation: blinkred 1s ease-out;
+}
+
+@keyframes blinkred {
+  0% {
+    // filter: opacity(0);
+    opacity: 0;
+  }
+  50% {
+    // filter: opacity(80%);
+    opacity: 0.7;
+  }
+  100% {
+    // filter: opacity(0);
+    opacity: 0;
+  }
+}
+
+// .blink-red-left-to-right {
+//   background: linear-gradient(to right, #8e0e00, #171a21, #171a21);
+//   background-size: 200% 100%;
+//   background-position: 100% 100%;
+//   animation: blinklefttoright 1s ease-out;
+// }
+
+// .blink-green-left-to-right {
+//   background: linear-gradient(to right, #357922, #171a21, #171a21);
+//   background-size: 200% 100%;
+//   background-position: 100% 100%;
+//   animation: blinklefttoright 1s ease-out;
+// }
+
+// @keyframes blinklefttoright {
+//   0% {
+//     background-position: 100% 100%;
+//   }
+//   30% {
+//     background-position: 30% 0%;
+//   }
+//   100% {
+//     background-position: 100% 100%;
+//   }
+// }
+
+// .blink-red-right-to-left {
+//   background: linear-gradient(to right, #171a21, #171a21, #8e0e00);
+//   background-size: 200% 100%;
+//   animation: blinkrighttoleft 1.5s ease-out;
+// }
+// .blink-green-right-to-left {
+//   background: linear-gradient(to right, #171a21, #171a21, #0f9b0f);
+//   background-size: 200% 100%;
+//   animation: blinkrighttoleft 1.5s ease-out;
+// }
+
+// @keyframes blinkrighttoleft {
+//   0% {
+//     background-position: 0% 0%;
+//   }
+//   50% {
+//     background-position: 70% 100%;
+//   }
+//   100% {
+//     background-position: 0% 0%;
+//   }
+// }
+
+@keyframes running-blink {
+  0% {
+    background: #139454;
+    box-shadow: 0 0 3px 3px #139454;
+  }
+  50% {
+    background: #1afc8c;
+    box-shadow: 0 0 2px 3px #1afc8c;
+  }
+  100% {
+    background: #139454;
+    box-shadow: 0 0 3px 3px #139454;
+  }
+}
+
+@keyframes pause-blink {
+  0% {
+    background: #9a7900;
+    box-shadow: 0 0 3px 3px #9a7900;
+  }
+  50% {
+    background: #ffce17;
+    box-shadow: 0 0 2px 3px #ffce17;
+  }
+  100% {
+    background: #9a7900;
+    box-shadow: 0 0 3px 3px #9a7900;
+  }
+}
