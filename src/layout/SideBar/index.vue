@@ -1,6 +1,6 @@
 <template>
   <div
-    :style="{height: `calc(100vh - 90px)`}"
+    :style="{height: `100%`}"
     class="sidebar-container"
   >
     <el-scrollbar wrap-class="scrollbar-wrapper">

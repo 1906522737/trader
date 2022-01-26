@@ -12,12 +12,12 @@ export default {}
 
 <style lang="scss" scoped>
 .app-body__container {
-  min-height: calc(100% - 37px);
+  min-height: calc(100% - 34px);
   // background: #ccc;
-  height: 100%;
+  // height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
-  padding: 0 5px 5px 5px;
+  padding: 5px;
 }
 </style>

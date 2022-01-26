@@ -9,11 +9,11 @@ export const constantRouterMap = [
   {
     path: '/redirect',
     component: Layout,
-    hidden: true,
+    // hidden: true,
     children: [
       {
-        path: '/redirect/:path*',
-        component: () => import('@/views/redirect/index')
+        path: 'index',
+        component: () => import('@/views/home/index')
       }
     ]
   },
@@ -31,32 +31,53 @@ export const constantRouterMap = [
   //   component: () => import('@/views/errorPage/401'),
   //   hidden: true
   // }
+  // {
+  //   path: '/demo',
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       component: () => import('@/views/demo/index'),
+  //       name: '测试',
+  //       meta: {
+  //         title: '测试',
+  //         icon: 'home'
+  //       }
+  //     }
+  //   ]
+  // },
   {
-    path: '/demo',
+    path: '/home',
     component: Layout,
+    // meta: {
+    //   title: '首页'
+    // },
     children: [
       {
         path: 'index',
-        component: () => import('@/views/demo/index'),
-        name: '测试',
+        component: () => import('@/views/home/index'),
+        name: '首页',
         meta: {
-          title: '测试',
+          title: '首页',
           icon: 'home'
         }
       }
     ]
   },
   {
-    path: '/test',
+    path: '/back-test',
     component: Layout,
+    // meta: {
+    //   title: '回测'
+    // },
     children: [
       {
-        path: 'index1',
-        component: () => import('@/views/test/index'),
-        name: '测试11',
+        path: '',
+        component: () => import('@/views/backTest/index'),
+        name: '回测',
         meta: {
-          title: '测试11',
-          icon: 'home'
+          title: '回测',
+          icon: 'back-test'
         }
       }
     ]

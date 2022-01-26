@@ -72,6 +72,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../styles/index.scss';
 .sub-el-icon {
   color: currentColor;
   width: 1em;
@@ -79,18 +80,35 @@ export default {
 }
 .menu-item-container {
   width: 100%;
-  // height: 60px;
+  height: 50px;
+  line-height: 50px;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   align-items: center;
   cursor: pointer;
   .menu-item-icon {
-    margin-top: 16px;
-    width: 20px;
-    height: 20px;
+    // margin-top: 16px;
+    margin: 0 12px;
+    // width: 20px;
+    // height: 20px;
   }
   .menu-item-title {
     font-size: 14px;
+  }
+  &:hover {
+    color: $--color-text-primary;
+  }
+
+  &.is-active,
+  &.is-open.is-active {
+    // color: $--color-text-primary;
+    // background-color: $primary;
+    color: $primary;
+  }
+
+  &.is-open {
+    background-color: $--color-background-light;
+    color: $--color-text-primary;
   }
 }
 </style>

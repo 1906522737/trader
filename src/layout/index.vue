@@ -1,26 +1,31 @@
 <template>
   <el-container class="app-container">
-    <el-header class="app-container__header">
+    <el-header
+      :height="`40px`"
+      class="app-container__header"
+    >
       <AppHeader />
     </el-header>
 
     <el-container class="app-container__body">
       <el-aside
         class="app-container-body__aside"
-        width="60px"
+        width="90px"
       >
         <AppSidebar ref="sideBar" />
       </el-aside>
       <el-main class="app-container-body__main">
+        <!-- <Narbar /> -->
+        <TagsView />
         <AppMain ref="appMain" />
       </el-main>
     </el-container>
-    <el-footer
+    <!-- <el-footer
       :height="`30px`"
       class="app-container__footer"
     >
       <AppFooter />
-    </el-footer>
+    </el-footer> -->
   </el-container>
 </template>
 
@@ -29,12 +34,16 @@ import AppHeader from './Header'
 import AppSidebar from './Sidebar'
 import AppMain from './AppMain'
 import AppFooter from './Footer'
+import Narbar from './Narbar'
+import TagsView from './TagsView'
 export default {
   components: {
     AppHeader,
     AppMain,
     AppSidebar,
-    AppFooter
+    AppFooter,
+    Narbar,
+    TagsView
   }
 }
 </script>
@@ -42,6 +51,7 @@ export default {
 <style lang="scss" scoped>
 @import '../styles/index.scss';
 .app-container {
+  display: flex;
   background: $--color-background-dark;
   width: 100%;
   height: 100%;
@@ -61,7 +71,8 @@ export default {
     padding: 2px;
   }
   .app-container__body {
-    height: calc(100% - 90px);
+    // height: calc(100% - 90px);
+    height: 100%;
     display: flex;
     overflow: hidden;
   }
