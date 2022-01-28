@@ -1,12 +1,25 @@
 <template>
-  <div>
-    backTest
+  <div class="chart-container">
+    <chart
+      height="100%"
+      width="100%"
+    />
   </div>
 </template>
 
 <script>
-export default {}
+import Chart from '@/components/Charts/Candlestick'
+
+export default {
+  name: 'Candlestick',
+  components: { Chart }
+}
 </script>
 
-<style>
+<style lang="scss" scoped>
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 84px);
+}
 </style>

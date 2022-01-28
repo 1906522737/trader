@@ -19,7 +19,8 @@ export const constantRouterMap = [
   },
   {
     path: '/',
-    component: Layout
+    component: Layout,
+    redirect: '/home/index'
   },
   // {
   //   path: '/404',

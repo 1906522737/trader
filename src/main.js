@@ -10,6 +10,9 @@ import '@/styles/index.scss'
 import 'element-ui/lib/theme-chalk/index.css'
 
 import './icons'
+import axios from 'axios'
+
+Vue.prototype.$axios = axios
 
 Vue.use(Element)
 
